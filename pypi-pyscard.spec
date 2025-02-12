@@ -7,7 +7,7 @@
 #
 Name     : pypi-pyscard
 Version  : 2.2.1
-Release  : 2
+Release  : 3
 URL      : https://files.pythonhosted.org/packages/fe/19/73e8fc37356a4232f9a86acf3794a0f6d8e014430f1f88153ae19fc21d88/pyscard-2.2.1.tar.gz
 Source0  : https://files.pythonhosted.org/packages/fe/19/73e8fc37356a4232f9a86acf3794a0f6d8e014430f1f88153ae19fc21d88/pyscard-2.2.1.tar.gz
 Summary  : Smartcard module for Python.
@@ -16,7 +16,6 @@ License  : LGPL-2.1
 Requires: pypi-pyscard-license = %{version}-%{release}
 Requires: pypi-pyscard-python = %{version}-%{release}
 Requires: pypi-pyscard-python3 = %{version}-%{release}
-Requires: pcsc-lite-lib
 BuildRequires : buildreq-distutils3
 BuildRequires : pkgconfig(libpcsclite)
 BuildRequires : pypi(setuptools)
@@ -53,6 +52,7 @@ Summary: python3 components for the pypi-pyscard package.
 Group: Default
 Requires: python3-core
 Provides: pypi(pyscard)
+Requires: pcsc-lite-lib
 
 %description python3
 python3 components for the pypi-pyscard package.
@@ -67,7 +67,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1739391478
+export SOURCE_DATE_EPOCH=1739392151
 export GCC_IGNORE_WERROR=1
 CLEAR_INTERMEDIATE_CFLAGS="$CLEAR_INTERMEDIATE_CFLAGS -fdebug-types-section -femit-struct-debug-baseonly -fno-lto -fstack-protector-strong -fzero-call-used-regs=used -g1 -gno-column-info -gno-variable-location-views -gz=zstd "
 CLEAR_INTERMEDIATE_FCFLAGS="$CLEAR_INTERMEDIATE_FFLAGS -fdebug-types-section -femit-struct-debug-baseonly -fno-lto -fstack-protector-strong -fzero-call-used-regs=used -g1 -gno-column-info -gno-variable-location-views -gz=zstd "
